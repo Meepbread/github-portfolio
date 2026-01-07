@@ -1,0 +1,347 @@
+/* --- RESET & VARIABLES --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+
+:root {
+    --bg-color: #0f0f0f;
+    --header-bg: #0f0f0f;
+    --text-main: #ffffff;
+    --text-secondary: #aaaaaa;
+    --hover-color: #272727;
+    --border-color: #303030;
+    --accent-blue: #3ea6ff;
+    
+    /* Community Post Card Colors */
+    --card-sky: #bde0fe;
+    --card-blue-dark: #219ebc;
+    --card-footer: #02a9ea;
+}
+
+body { 
+    background-color: var(--bg-color); 
+    color: var(--text-main); 
+    overflow-x: hidden; 
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex; justify-content: space-between; align-items: center; padding: 0 16px; height: 56px;
+    background-color: var(--header-bg); position: fixed; width: 100%; top: 0; z-index: 100;
+}
+.menu-logo { display: flex; align-items: center; gap: 20px; }
+.menu-icon { font-size: 20px; cursor: pointer; padding: 8px; border-radius: 50%; }
+.menu-icon:hover { background-color: var(--hover-color); }
+.logo { display: flex; align-items: center; gap: 5px; font-weight: 700; font-size: 18px; letter-spacing: -0.5px; }
+
+/* Search Bar */
+.search-bar { display: flex; align-items: center; flex: 1; max-width: 600px; margin: 0 20px; }
+.search-bar input {
+    width: 100%; padding: 10px 15px; border: 1px solid var(--border-color); background: #121212; color: white;
+    border-radius: 40px 0 0 40px; outline: none; font-size: 16px;
+}
+.search-bar button {
+    padding: 10px 20px; border: 1px solid var(--border-color); background: #222; border-left: none;
+    border-radius: 0 40px 40px 0; color: var(--text-secondary); cursor: pointer;
+}
+.mic { margin-left: 10px; padding: 10px; background: #181818; border-radius: 50%; cursor: pointer; }
+
+/* User Actions */
+.user-actions { display: flex; align-items: center; gap: 15px; color: var(--text-main); }
+.user-avatar-small { width: 32px; height: 32px; background: purple; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 14px; }
+
+/* --- LAYOUT --- */
+.main-container { display: flex; margin-top: 56px; height: calc(100vh - 56px); }
+
+/* --- SIDEBAR --- */
+.sidebar { width: 240px; background: var(--bg-color); padding: 12px; height: 100%; position: fixed; overflow-y: auto; }
+.content { margin-left: 240px; width: 100%; padding: 0 24px; }
+
+.sidebar-link {
+    display: flex; align-items: center; padding: 10px 12px; text-decoration: none; color: var(--text-main);
+    border-radius: 10px; margin-bottom: 4px; font-size: 14px;
+}
+.sidebar-link:hover { background-color: var(--hover-color); }
+.sidebar-link.active { background-color: var(--hover-color); font-weight: 500; }
+.sidebar-link i { margin-right: 20px; font-size: 18px; width: 24px; text-align: center; }
+hr { border: 0; border-top: 1px solid var(--border-color); margin: 10px 0; }
+.sidebar h3 { font-size: 14px; color: var(--text-main); padding: 8px 12px; }
+
+/* --- CHANNEL HEADER --- */
+.channel-banner img { width: 100%; height: 170px; object-fit: cover; border-radius: 15px; margin-top: 20px; }
+.channel-info { display: flex; align-items: flex-start; gap: 24px; margin-top: 30px; padding-bottom: 10px; }
+.channel-avatar img { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; }
+.channel-text h1 { font-size: 36px; display: flex; align-items: center; gap: 10px; }
+.verified-icon { font-size: 16px; color: #aaa; }
+.channel-text p { color: var(--text-secondary); margin: 5px 0 10px; font-size: 14px; }
+.subscribe-btn {
+    background-color: var(--text-main); color: black; padding: 10px 16px; border-radius: 20px;
+    text-decoration: none; font-weight: 500; font-size: 14px; margin-top: 10px; display: inline-block;
+}
+
+/* --- TABS SYSTEM --- */
+.tabs-container {
+    display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 20px; position: sticky; top: 56px; background: var(--bg-color); z-index: 10;
+}
+.tab-btn {
+    background: none; border: none; color: var(--text-secondary); padding: 14px 30px; font-size: 16px; 
+    font-weight: 500; cursor: pointer; text-transform: uppercase;
+}
+.tab-btn:hover { color: var(--text-main); }
+.tab-btn.active { color: var(--text-main); border-bottom: 3px solid var(--text-main); }
+
+/* --- SECTIONS (View Toggling) --- */
+.section-view { display: none; }
+.section-view.active-view { display: block; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* --- VIDEO GRID (HOME) --- */
+.video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
+.video-card { cursor: pointer; transition: transform 0.2s; }
+.video-card:hover { transform: scale(1.02); }
+
+.thumbnail { position: relative; width: 100%; padding-top: 56.25%; background: #333; border-radius: 12px; overflow: hidden; margin-bottom: 12px; }
+.thumbnail img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.duration { position: absolute; bottom: 8px; right: 8px; background: rgba(0,0,0,0.8); padding: 3px 6px; border-radius: 4px; font-size: 12px; }
+
+.video-details { display: flex; gap: 12px; position: relative; }
+/* Find this section in your style.css and update it */
+.avatar { 
+    width: 36px; 
+    height: 36px; 
+    border-radius: 50%; 
+    background: purple; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    
+    /* ADD THIS LINE BELOW TO STOP SQUISHING */
+    flex-shrink: 0; 
+}
+
+/* --- COMMUNITY POSTS (NEW) --- */
+.post-container {
+    max-width: 600px; margin: 0 auto 40px auto; border: 1px solid var(--border-color); border-radius: 4px; padding: 16px;
+}
+.post-header { display: flex; gap: 12px; margin-bottom: 10px; }
+.post-meta h3 { font-size: 14px; font-weight: 500; }
+.post-time { color: var(--text-secondary); font-size: 12px; }
+.post-text { margin-bottom: 15px; font-size: 15px; line-height: 1.4; }
+
+/* --- THE SOLE SPACE CARD DESIGN --- */
+.aesthetic-card {
+    background-color: var(--card-sky); /* Light Blue Background */
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+
+.card-logo-circle {
+    width: 60px; height: 60px; background-color: #1e6091; border-radius: 50%; 
+    margin: 0 auto 20px auto; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px;
+}
+
+.white-inner-box {
+    background: white;
+    color: black;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+    padding: 30px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.white-inner-box h2 { font-size: 22px; margin-bottom: 5px; font-weight: 900; }
+.white-inner-box h3 { font-size: 18px; margin-bottom: 20px; font-weight: 900; }
+.code { color: black; font-weight: 900; text-transform: uppercase; }
+
+.card-footer-strip {
+    background-color: var(--card-footer);
+    color: white;
+    width: 85%;
+    margin: 0 auto 30px auto; /* Margin bottom creates the light blue gap */
+    padding: 12px 20px;
+    border-radius: 0 0 20px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 13px; font-weight: 500;
+    border-top: 2px dashed rgba(255,255,255,0.6); /* The dotted line */
+}
+
+.mug-icon { font-size: 16px; }
+
+.post-actions {
+    display: flex; gap: 20px; margin-top: 10px; color: var(--text-main);
+}
+.action-item { display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 14px; }
+
+/* --- MODAL --- */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); align-items: center; justify-content: center; }
+.modal-content { background-color: #212121; padding: 20px; border-radius: 12px; width: 90%; max-width: 600px; position: relative; }
+.close-btn { position: absolute; top: 10px; right: 20px; font-size: 28px; cursor: pointer; }
+.modal-img { width: 100%; border-radius: 8px; }
+.modal-title { margin-top: 10px; font-size: 18px; }
+
+.modal-buttons { margin-top: 15px; display: flex; gap: 10px; }
+.action-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 2px; text-decoration: none; font-weight: 500; }
+.primary-btn { background: #3ea6ff; color: black; }
+.secondary-btn { background: #222; color: white; border: 1px solid #444; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .sidebar { display: none; }
+    .content { margin-left: 0; }
+    .search-bar { display: none; }
+}
+
+/* --- ABOUT PAGE STYLES --- */
+
+.about-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 20px auto 60px 0; /* Align left but keep spacing */
+    padding-top: 10px;
+}
+
+/* Left Column */
+.about-left {
+    flex: 2; /* Takes up 2/3 of space */
+    min-width: 300px;
+}
+
+.about-left h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.description-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.description-text strong {
+    color: white;
+}
+
+/* Details Section */
+.business-inquiries h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.detail-label {
+    color: var(--text-secondary);
+}
+
+.email-btn {
+    background-color: #3ea6ff; /* YouTube Blue */
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Right Column */
+.about-right {
+    flex: 1; /* Takes up 1/3 of space */
+    min-width: 250px;
+}
+
+.stats-box, .links-box {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.stats-box h3, .links-box h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.stat-item {
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid #222; /* Subtle separator */
+}
+
+/* Links List */
+.link-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #3ea6ff; /* Standard Link Blue */
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.link-item i {
+    width: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.link-item:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for About Page */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-right {
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+    }
+}
+
+/* --- SIDEBAR TOGGLE LOGIC --- */
+
+/* 1. Add smooth transitions so it slides nicely */
+.sidebar {
+    transition: transform 0.3s ease;
+    z-index: 50; /* Ensure it stays above content if needed */
+}
+
+.content {
+    transition: margin-left 0.3s ease;
+}
+
+/* 2. When the body has the class 'sidebar-hidden'... */
+
+/* Move sidebar off-screen to the left */
+body.sidebar-hidden .sidebar {
+    transform: translateX(-100%);
+}
+
+/* Remove the margin from content so it fills the screen */
+body.sidebar-hidden .content {
+    margin-left: 0;
+}
+
+/* 3. Mobile Specific Adjustment */
+/* On mobile, sidebar is usually hidden by default. 
+   We invert the logic or just let the media query handle it. 
+   For simplicity, this ensures the toggle works on desktop. */

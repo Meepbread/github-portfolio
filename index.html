@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith Recinos Garcia - DevTube</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="menu-logo">
+            <i class="fas fa-bars menu-icon"></i>
+            <div class="logo">
+                <i class="fab fa-youtube" style="color: red;"></i>
+                <span>PORTFOLIO</span>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search projects...">
+            <button><i class="fas fa-search"></i></button>
+            <div class="mic"><i class="fas fa-microphone"></i></div>
+        </div>
+
+        <div class="user-actions">
+            <i class="fas fa-video"></i>
+            <i class="fas fa-bell"></i>
+            <div class="user-avatar-small">F</div>
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <aside class="sidebar">
+            <a href="#" class="sidebar-link active" onclick="switchTab('home')">
+                <i class="fas fa-home"></i> <span>Home</span>
+            </a>
+            <a href="#" class="sidebar-link" onclick="switchTab('community')">
+                <i class="fas fa-user-friends"></i> <span>Community</span>
+            </a>
+            <a href="#" class="sidebar-link">
+                <i class="fas fa-play-circle"></i> <span>Projects</span>
+            </a>
+            <hr>
+            <h3>My Tech Stack</h3>
+            <a href="#" class="sidebar-link"><i class="fab fa-react"></i> <span>React JS</span></a>
+            <a href="#" class="sidebar-link"><i class="fab fa-python"></i> <span>Python</span></a>
+            <a href="#" class="sidebar-link"><i class="fab fa-css3"></i> <span>Design</span></a>
+        </aside>
+
+        <main class="content">
+
+            <section class="channel-banner-section">
+                <div class="channel-banner">
+                    <img src="img/HELLOFRIEND.png" alt="Banner"
+                        onerror="this.src='https://via.placeholder.com/1200x200/111/fff?text=Channel+Banner'">
+                </div>
+                <div class="channel-info">
+                    <div class="channel-avatar">
+                        <img src="img/headshot.jpeg" alt="Profile"
+                            onerror="this.src='https://via.placeholder.com/150/purple/fff?text=F'">
+                    </div>
+                    <div class="channel-text">
+                        <h1>Faith Recinos Garcia <i class="fas fa-check-circle verified-icon"></i></h1>
+                        <p>@milkbread • 1.2K Commits • 50 Projects</p>
+                        <div class="channel-desc">
+                            Building scalable web apps and experimenting with game design. I turn coffee into code.
+                        </div>
+                        <a href="#" class="subscribe-btn">DOWNLOAD RESUME</a>
+                    </div>
+                </div>
+
+                <div class="tabs-container">
+                    <button class="tab-btn active" id="btn-home" onclick="switchTab('home')">Home</button>
+                    <button class="tab-btn" id="btn-community" onclick="switchTab('community')">Community</button>
+                    <button class="tab-btn">Playlists</button>
+                    <button class="tab-btn" id="btn-about" onclick="switchTab('about')">About</button>
+                    <button class="tab-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </section>
+
+            <div id="view-home" class="section-view active-view">
+                <h2>Featured Projects</h2>
+                <div class="video-grid">
+                    <div class="video-card" data-live="https://google.com" data-code="https://github.com">
+                        <div class="thumbnail">
+                            <img src="https://via.placeholder.com/640x360/333/fff?text=React+Project" alt="Thumb">
+                            <span class="duration">React</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="avatar">F</div>
+                            <div class="details-text">
+                                <h3 class="video-title">E-Commerce Dashboard Full Stack Build</h3>
+                                <p class="channel-name">Faith Recinos Garcia</p>
+                                <p class="metadata">10K views • 2 weeks ago</p>
+                            </div>
+                            <i class="fas fa-ellipsis-v dot-menu"></i>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-live="#" data-code="#">
+                        <div class="thumbnail">
+                            <img src="https://via.placeholder.com/640x360/444/fff?text=Python+Scripts" alt="Thumb">
+                            <span class="duration">Python</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="avatar">F</div>
+                            <div class="details-text">
+                                <h3 class="video-title">Automating Tasks with Python Scripts</h3>
+                                <p class="channel-name">Faith Recinos Garcia</p>
+                                <p class="metadata">540 views • 1 month ago</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card" data-live="#" data-code="#">
+                        <div class="thumbnail">
+                            <img src="https://via.placeholder.com/640x360/555/fff?text=Unity+Game" alt="Thumb">
+                            <span class="duration">C#</span>
+                        </div>
+                        <div class="video-details">
+                            <div class="avatar">F</div>
+                            <div class="details-text">
+                                <h3 class="video-title">Unity 2D Platformer Devlog #1</h3>
+                                <p class="channel-name">Faith Recinos Garcia</p>
+                                <p class="metadata">8.2K views • 3 months ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-community" class="section-view">
+
+                <div class="post-container">
+                    <div class="post-header">
+                        <div class="avatar">F</div>
+                        <div class="post-meta">
+                            <h3>Faith Recinos Garcia <span class="post-time">1 month ago (edited)</span></h3>
+                        </div>
+                        <i class="fas fa-ellipsis-v dot-menu"></i>
+                    </div>
+
+                    <div class="post-text">
+                        Hi everyone! New update is almost here, and we wanted to do something special to thank all of
+                        you for supporting our work. So we've put together a couple of festive gifts just for you 🎄
+                        <br><br>Read more
+                    </div>
+
+                    <div class="aesthetic-card">
+                        <div class="card-logo-circle">
+                            <i class="fas fa-fish"></i>
+                        </div>
+
+                        <div class="white-inner-box">
+                            <h2>10% off on the shop with code <br> <span class="code">SOLESPACE10</span></h2>
+                            <br>
+                            <h2>15% off on the commissions <br> with code <span class="code">SOLESPACE15</span></h2>
+                        </div>
+
+                        <div class="card-footer-strip">
+                            <div class="mug-icon"><i class="fas fa-mug-hot" style="color: red;"></i> ☕</div>
+                            <div>Ends 25 December, 2025</div>
+                        </div>
+                    </div>
+
+                    <div class="post-actions">
+                        <div class="action-item"><i class="far fa-thumbs-up"></i> 11</div>
+                        <div class="action-item"><i class="far fa-thumbs-down"></i></div>
+                        <div class="action-item"><i class="fas fa-share"></i></div>
+                        <div class="action-item"><i class="far fa-comment-alt"></i> 3</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="view-about" class="section-view">
+                <div class="about-container">
+
+                    <div class="about-left">
+                        <h2>Description</h2>
+                        <div class="description-text">
+                            <p>
+                                Hello! I'm Faith Recinos Garcia. I am a Software Engineering student at USC with a
+                                passion for building scalable web applications and interactive game experiences.
+                            </p>
+                            <br>
+                            <p>
+                                <strong>🔧 Tech Stack:</strong> Python, React, C#, Unity, HTML/CSS.
+                            </p>
+                            <br>
+                            <p>
+                                On this channel (portfolio), you will find devlogs of my latest game projects, breakdown
+                                videos of my full-stack builds, and experiments with UI/UX design. I love combining
+                                clean code with aesthetic design.
+                            </p>
+                            <br>
+                            <p>
+                                Currently obsessed with: Tennis 🎾, Designer Toys (Popmart/Smiski), and AI.
+                            </p>
+                            <br>
+                            <p>
+                                <em>"I turn coffee into code."</em>
+                            </p>
+                        </div>
+
+                        <div class="business-inquiries">
+                            <h3>Details</h3>
+                            <div class="detail-row">
+                                <span class="detail-label">For business inquiries:</span>
+                                <a href="mailto:fbrecino@usc.edu" class="email-btn">View email address</a>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Location:</span>
+                                <span>United States</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-right">
+
+                        <div class="stats-box">
+                            <h3>Stats</h3>
+                            <div class="stat-item">Joined Sep 24, 2025</div>
+                            <div class="stat-item">1,203,404 views</div>
+                            <div class="stat-item">50 Projects</div>
+                        </div>
+
+                        <div class="links-box">
+                            <h3>Links</h3>
+                            <a href="#" class="link-item">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fas fa-globe"></i> Portfolio Website
+                            </a>
+                            <a href="#" class="link-item">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modalImage" src="" alt="Project Screen" class="modal-img">
+            <h2 id="modalTitle" class="modal-title">Project Title</h2>
+            <div class="modal-buttons">
+                <a href="#" id="liveBtn" target="_blank" class="action-btn primary-btn"><i class="fas fa-thumbs-up"></i>
+                    Live Demo</a>
+                <a href="#" id="codeBtn" target="_blank" class="action-btn secondary-btn"><i class="fas fa-share"></i>
+                    Source Code</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* --- TAB LOGIC --- */
+        function switchTab(tabName) {
+            // 1. Hide all views
+            document.querySelectorAll('.section-view').forEach(view => {
+                view.classList.remove('active-view');
+            });
+            // 2. Remove active class from buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // 3. Show selected view & Highlight Button
+            document.getElementById('view-' + tabName).classList.add('active-view');
+
+            // Try to find the button ID, if clicked from sidebar, the button ID might not match exactly, 
+            // so we handle the button highlight if it exists
+            const btn = document.getElementById('btn-' + tabName);
+            if (btn) btn.classList.add('active');
+        }
+
+        /* --- MODAL LOGIC --- */
+        const modal = document.getElementById("videoModal");
+        const closeBtn = document.querySelector(".close-btn");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalImage = document.getElementById("modalImage");
+        const liveBtn = document.getElementById("liveBtn");
+        const codeBtn = document.getElementById("codeBtn");
+        const projectCards = document.querySelectorAll('.video-card');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.querySelector('.video-title').innerText;
+                const imgSource = card.querySelector('img').src;
+                const liveLink = card.getAttribute('data-live') || '#';
+                const codeLink = card.getAttribute('data-code') || '#';
+
+                modalTitle.innerText = title;
+                modalImage.src = imgSource;
+                liveBtn.href = liveLink;
+                codeBtn.href = codeLink;
+                modal.style.display = "flex";
+            });
+        });
+
+        // Close functions
+        closeBtn.addEventListener('click', () => modal.style.display = "none");
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) modal.style.display = "none";
+        });
+
+        /* --- SIDEBAR TOGGLE LOGIC --- */
+        const menuIcon = document.querySelector('.menu-icon');
+        const body = document.body;
+
+        menuIcon.addEventListener('click', () => {
+            // This simply toggles the class name on the body tag
+            body.classList.toggle('sidebar-hidden');
+        });
+    </script>
+
+</body>
+
+</html>
