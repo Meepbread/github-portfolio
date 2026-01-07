@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith Recinos Garcia - DevTube</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header class="header">
@@ -20,7 +18,7 @@
                 <span>PORTFOLIO</span>
             </div>
         </div>
-
+        
         <div class="search-bar">
             <input type="text" placeholder="Search projects...">
             <button><i class="fas fa-search"></i></button>
@@ -43,8 +41,11 @@
             <a href="#" class="sidebar-link" onclick="switchTab('community')">
                 <i class="fas fa-user-friends"></i> <span>Community</span>
             </a>
-            <a href="#" class="sidebar-link">
-                <i class="fas fa-play-circle"></i> <span>Projects</span>
+            <a href="#" class="sidebar-link" onclick="switchTab('playlists')">
+                <i class="fas fa-list-alt"></i> <span>Playlists</span>
+            </a>
+            <a href="#" class="sidebar-link" onclick="switchTab('about')">
+                <i class="fas fa-info-circle"></i> <span>About</span>
             </a>
             <hr>
             <h3>My Tech Stack</h3>
@@ -54,31 +55,29 @@
         </aside>
 
         <main class="content">
-
+            
             <section class="channel-banner-section">
                 <div class="channel-banner">
-                    <img src="img/HELLOFRIEND.png" alt="Banner"
-                        onerror="this.src='https://via.placeholder.com/1200x200/111/fff?text=Channel+Banner'">
+                    <img src="img/HELLOFRIEND.png" alt="Banner" onerror="this.src='https://via.placeholder.com/1200x200/111/fff?text=Channel+Banner'">
                 </div>
                 <div class="channel-info">
                     <div class="channel-avatar">
-                        <img src="img/headshot.jpeg" alt="Profile"
-                            onerror="this.src='https://via.placeholder.com/150/purple/fff?text=F'">
+                        <img src="img/headshot.jpeg" alt="Profile" onerror="this.src='https://via.placeholder.com/150/purple/fff?text=F'">
                     </div>
                     <div class="channel-text">
                         <h1>Faith Recinos Garcia <i class="fas fa-check-circle verified-icon"></i></h1>
-                        <p>@milkbread • 1.2K Commits • 50 Projects</p>
+                        <p>@meepbread • 1.2K Commits • 50 Projects</p>
                         <div class="channel-desc">
                             Building scalable web apps and experimenting with game design. I turn coffee into code.
                         </div>
                         <a href="#" class="subscribe-btn">DOWNLOAD RESUME</a>
                     </div>
                 </div>
-
+                
                 <div class="tabs-container">
                     <button class="tab-btn active" id="btn-home" onclick="switchTab('home')">Home</button>
                     <button class="tab-btn" id="btn-community" onclick="switchTab('community')">Community</button>
-                    <button class="tab-btn">Playlists</button>
+                    <button class="tab-btn" id="btn-playlists" onclick="switchTab('playlists')">Playlists</button>
                     <button class="tab-btn" id="btn-about" onclick="switchTab('about')">About</button>
                     <button class="tab-btn"><i class="fas fa-search"></i></button>
                 </div>
@@ -87,9 +86,16 @@
             <div id="view-home" class="section-view active-view">
                 <h2>Featured Projects</h2>
                 <div class="video-grid">
-                    <div class="video-card" data-live="https://google.com" data-code="https://github.com">
+                    
+                    <div class="video-card" 
+                        data-live="https://google.com" 
+                        data-code="https://github.com"
+                        data-views="10K views"
+                        data-date="2 weeks ago"
+                        data-desc="A full-stack dashboard built with React and Node.js. Features include real-time data visualization, user authentication, and dark mode support. This project demonstrates my ability to handle complex state management.">
+                        
                         <div class="thumbnail">
-                            <img src="https://via.placeholder.com/640x360/333/fff?text=React+Project" alt="Thumb">
+                            <img src="https://via.placeholder.com/640x360/333/fff?text=Project+Preview" alt="Thumb">
                             <span class="duration">React</span>
                         </div>
                         <div class="video-details">
@@ -103,9 +109,15 @@
                         </div>
                     </div>
 
-                    <div class="video-card" data-live="#" data-code="#">
+                    <div class="video-card"
+                        data-live="#" 
+                        data-code="#"
+                        data-views="540 views"
+                        data-date="1 month ago"
+                        data-desc="A collection of Python scripts to automate daily tasks such as file organization, email sorting, and data scraping. Uses libraries like Pandas, OS, and BeautifulSoup.">
+                        
                         <div class="thumbnail">
-                            <img src="https://via.placeholder.com/640x360/444/fff?text=Python+Scripts" alt="Thumb">
+                            <img src="https://via.placeholder.com/640x360/444/fff?text=App+UI" alt="Thumb">
                             <span class="duration">Python</span>
                         </div>
                         <div class="video-details">
@@ -117,10 +129,16 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="video-card" data-live="#" data-code="#">
+                    
+                    <div class="video-card"
+                        data-live="#" 
+                        data-code="#"
+                        data-views="8.2K views"
+                        data-date="3 months ago"
+                        data-desc="First entry in my Unity development log. I cover player movement mechanics (C#), tilemap collision, and basic animation state machines. Check out the source code to see how the physics system works.">
+                        
                         <div class="thumbnail">
-                            <img src="https://via.placeholder.com/640x360/555/fff?text=Unity+Game" alt="Thumb">
+                            <img src="https://via.placeholder.com/640x360/555/fff?text=Game+Dev" alt="Thumb">
                             <span class="duration">C#</span>
                         </div>
                         <div class="video-details">
@@ -132,6 +150,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -178,10 +197,10 @@
                 </div>
 
             </div>
-
+            
+            <div id="view-playlists" class="section-view"><h2>Playlists</h2></div>
             <div id="view-about" class="section-view">
                 <div class="about-container">
-
                     <div class="about-left">
                         <h2>Description</h2>
                         <div class="description-text">
@@ -204,9 +223,7 @@
                                 Currently obsessed with: Tennis 🎾, Designer Toys (Popmart/Smiski), and AI.
                             </p>
                             <br>
-                            <p>
-                                <em>"I turn coffee into code."</em>
-                            </p>
+                            <p><em>"I turn coffee into code."</em></p>
                         </div>
 
                         <div class="business-inquiries">
@@ -223,7 +240,6 @@
                     </div>
 
                     <div class="about-right">
-
                         <div class="stats-box">
                             <h3>Stats</h3>
                             <div class="stat-item">Joined Sep 24, 2025</div>
@@ -233,23 +249,27 @@
 
                         <div class="links-box">
                             <h3>Links</h3>
-                            <a href="#" class="link-item">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fas fa-globe"></i> Portfolio Website
-                            </a>
-                            <a href="#" class="link-item">
-                                <i class="fab fa-instagram"></i> Instagram
-                            </a>
+                            <a href="#" class="link-item"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="#" class="link-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="#" class="link-item"><i class="fas fa-globe"></i> Portfolio Website</a>
+                            <a href="#" class="link-item"><i class="fab fa-instagram"></i> Instagram</a>
                         </div>
-
                     </div>
                 </div>
             </div>
+
+            <main class="content">
+            
+            <div id="view-about" class="section-view">
+                <h2>About</h2>
+                <p style="color:var(--text-secondary)">About description goes here.</p>
+            </div>
+
+            <footer class="invisible-footer">
+                <p>&copy; 2026 Faith Recinos Garcia. Made with <i class="fas fa-heart" style="color: red;"></i> in California.</p>
+            </footer>
+
+        </main>
 
         </main>
     </div>
@@ -257,13 +277,39 @@
     <div id="videoModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
+            
             <img id="modalImage" src="" alt="Project Screen" class="modal-img">
+            
             <h2 id="modalTitle" class="modal-title">Project Title</h2>
-            <div class="modal-buttons">
-                <a href="#" id="liveBtn" target="_blank" class="action-btn primary-btn"><i class="fas fa-thumbs-up"></i>
-                    Live Demo</a>
-                <a href="#" id="codeBtn" target="_blank" class="action-btn secondary-btn"><i class="fas fa-share"></i>
-                    Source Code</a>
+            
+            <div class="modal-actions-row">
+                <div class="modal-channel-info">
+                    <div class="user-avatar-small modal-avatar">F</div>
+                    <div class="modal-channel-text">
+                        <span class="modal-channel-name">Faith Recinos Garcia</span>
+                        <span class="modal-sub-count">1.2K commits</span>
+                    </div>
+                    <button class="pill-btn subscribe-btn-modal">Subscribe</button>
+                </div>
+                
+                <div class="modal-buttons-group">
+                    <a href="#" id="liveBtn" target="_blank" class="pill-btn action-pill">
+                        <i class="fas fa-thumbs-up"></i> Live Demo
+                    </a>
+                    <a href="#" id="codeBtn" target="_blank" class="pill-btn action-pill">
+                        <i class="fas fa-code"></i> Source Code
+                    </a>
+                    <button class="pill-btn icon-only-pill"><i class="fas fa-share"></i></button>
+                </div>
+            </div>
+
+            <div class="modal-description-box">
+                <div class="modal-meta-line">
+                    <span id="modalViews">12K views</span> • <span id="modalDate">2 weeks ago</span>
+                </div>
+                <div id="modalDesc" class="modal-desc-text">
+                    Description goes here...
+                </div>
             </div>
         </div>
     </div>
@@ -271,64 +317,66 @@
     <script>
         /* --- TAB LOGIC --- */
         function switchTab(tabName) {
-            // 1. Hide all views
-            document.querySelectorAll('.section-view').forEach(view => {
-                view.classList.remove('active-view');
-            });
-            // 2. Remove active class from buttons
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // 3. Show selected view & Highlight Button
-            document.getElementById('view-' + tabName).classList.add('active-view');
-
-            // Try to find the button ID, if clicked from sidebar, the button ID might not match exactly, 
-            // so we handle the button highlight if it exists
+            document.querySelectorAll('.section-view').forEach(view => view.classList.remove('active-view'));
+            document.querySelectorAll('.tab-btn, .sidebar-link').forEach(btn => btn.classList.remove('active'));
+            const view = document.getElementById('view-' + tabName);
             const btn = document.getElementById('btn-' + tabName);
-            if (btn) btn.classList.add('active');
+            if(view) view.classList.add('active-view');
+            if(btn) btn.classList.add('active');
         }
 
-        /* --- MODAL LOGIC --- */
+        /* --- MODAL LOGIC (UPDATED) --- */
         const modal = document.getElementById("videoModal");
         const closeBtn = document.querySelector(".close-btn");
         const modalTitle = document.getElementById("modalTitle");
         const modalImage = document.getElementById("modalImage");
         const liveBtn = document.getElementById("liveBtn");
         const codeBtn = document.getElementById("codeBtn");
+        
+        // New elements for description box
+        const modalViews = document.getElementById("modalViews");
+        const modalDate = document.getElementById("modalDate");
+        const modalDesc = document.getElementById("modalDesc");
+
         const projectCards = document.querySelectorAll('.video-card');
 
         projectCards.forEach(card => {
             card.addEventListener('click', () => {
+                // Get data from HTML attributes
                 const title = card.querySelector('.video-title').innerText;
                 const imgSource = card.querySelector('img').src;
                 const liveLink = card.getAttribute('data-live') || '#';
                 const codeLink = card.getAttribute('data-code') || '#';
+                const views = card.getAttribute('data-views') || '0 views';
+                const date = card.getAttribute('data-date') || 'Recently';
+                const desc = card.getAttribute('data-desc') || 'No description available.';
 
+                // Populate Modal
                 modalTitle.innerText = title;
                 modalImage.src = imgSource;
                 liveBtn.href = liveLink;
                 codeBtn.href = codeLink;
+                
+                modalViews.innerText = views;
+                modalDate.innerText = date;
+                modalDesc.innerText = desc;
+
                 modal.style.display = "flex";
             });
         });
 
-        // Close functions
+        /* --- CLOSE MODAL --- */
         closeBtn.addEventListener('click', () => modal.style.display = "none");
         window.addEventListener('click', (e) => {
             if (e.target == modal) modal.style.display = "none";
         });
 
-        /* --- SIDEBAR TOGGLE LOGIC --- */
+        /* --- SIDEBAR TOGGLE --- */
         const menuIcon = document.querySelector('.menu-icon');
-        const body = document.body;
-
         menuIcon.addEventListener('click', () => {
-            // This simply toggles the class name on the body tag
-            body.classList.toggle('sidebar-hidden');
+            document.body.classList.toggle('sidebar-hidden');
         });
     </script>
 
 </body>
-
 </html>
