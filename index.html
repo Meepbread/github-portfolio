@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith Recinos Garcia - DevTube</title>
+    <title>Faith Recinos Garcia | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ADDED: Ensures bullet points inside the modal have proper spacing */
+        .modal-desc-text ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .modal-desc-text li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+    </style>
 </head>
+
 <body>
 
     <header class="header">
@@ -18,7 +31,7 @@
                 <span>PORTFOLIO</span>
             </div>
         </div>
-        
+
         <div class="search-bar">
             <input type="text" placeholder="Search projects...">
             <button><i class="fas fa-search"></i></button>
@@ -48,14 +61,10 @@
                 <i class="fas fa-info-circle"></i> <span>About</span>
             </a>
             <hr>
-            <h3>My Tech Stack</h3>
-            <a href="#" class="sidebar-link"><i class="fab fa-react"></i> <span>React JS</span></a>
-            <a href="#" class="sidebar-link"><i class="fab fa-python"></i> <span>Python</span></a>
-            <a href="#" class="sidebar-link"><i class="fab fa-css3"></i> <span>Design</span></a>
         </aside>
 
         <main class="content">
-            
+
             <section class="channel-banner-section">
                 <div class="channel-banner">
                     <img src="img/HELLOFRIEND.png" alt="Banner">
@@ -66,14 +75,16 @@
                     </div>
                     <div class="channel-text">
                         <h1>Faith Recinos Garcia <i class="fas fa-check-circle verified-icon"></i></h1>
-                        <p>@meepbread • 1.2K Commits • 50 Projects</p>
+                        <p>@meepbread • USC Undergraduate • USC Graduate</p>
                         <div class="channel-desc">
-                            Building scalable web apps and experimenting with game design. I turn coffee into code.
+                            Here to share cool projects I make and document my learning journey in software development,
+                            cyber security, and AI!
                         </div>
-                        <a href="Faith_Recinos_Garcia_Resume.pdf" class="subscribe-btn" download>DOWNLOAD RESUME</a>
+                        <a href="files/Faith_Recinos_Garcia_Resume.pdf" class="subscribe-btn" download>DOWNLOAD
+                            RESUME</a>
                     </div>
                 </div>
-                
+
                 <div class="tabs-container">
                     <button class="tab-btn active" id="btn-home" onclick="switchTab('home')">Home</button>
                     <button class="tab-btn" id="btn-community" onclick="switchTab('community')">Community</button>
@@ -86,36 +97,25 @@
             <div id="view-home" class="section-view active-view">
                 <h2>Featured Projects</h2>
                 <div class="video-grid">
-                    
-                    <div class="video-card" 
-                        data-live="https://google.com" 
-                        data-code="https://github.com"
-                        data-views="10K views"
-                        data-date="2 weeks ago"
-                        data-desc="A full-stack dashboard built with React and Node.js. Features include real-time data visualization, user authentication, and dark mode support. This project demonstrates my ability to handle complex state management.">
-                        
+                    <div class="video-card" data-live="https://google.com" data-code="https://github.com"
+                        data-views="10K views" data-date="2 weeks ago"
+                        data-desc="<ul><li>Engineered a content-based recommendation system using TF-IDF vectorization and cosine similarity to rank Amazon products based on user query relevance.</li><li>Integrated Sentiment Analysis using TextBlob to score product descriptions, boosting rankings for items with positive descriptive language (+0.3 weight).</li><li>Developed a multi-factor ranking algorithm that normalizes and weights features including price-to-budget ratio, review count confidence, and star ratings.</li><li>Implemented a caching layer (search_cache.json) to optimize API usage, reducing redundant network calls by storing normalized query results.</li></ul>">
                         <div class="thumbnail">
                             <img src="https://via.placeholder.com/640x360/333/fff?text=Project+Preview" alt="Thumb">
-                            <span class="duration">React</span>
+                            <span class="duration">Python</span>
                         </div>
                         <div class="video-details">
                             <div class="avatar">F</div>
                             <div class="details-text">
-                                <h3 class="video-title">E-Commerce Dashboard Full Stack Build</h3>
+                                <h3 class="video-title">Personal Shopping Recommender | Python, Scikit-Learn, NLTK</h3>
                                 <p class="channel-name">Faith Recinos Garcia</p>
                                 <p class="metadata">10K views • 2 weeks ago</p>
                             </div>
-                            <i class="fas fa-ellipsis-v dot-menu"></i>
                         </div>
                     </div>
 
-                    <div class="video-card"
-                        data-live="#" 
-                        data-code="#"
-                        data-views="540 views"
-                        data-date="1 month ago"
-                        data-desc="A collection of Python scripts to automate daily tasks such as file organization, email sorting, and data scraping. Uses libraries like Pandas, OS, and BeautifulSoup.">
-                        
+                    <div class="video-card" data-live="#" data-code="#" data-views="540 views" data-date="1 month ago"
+                        data-desc="Python automation scripts.">
                         <div class="thumbnail">
                             <img src="https://via.placeholder.com/640x360/444/fff?text=App+UI" alt="Thumb">
                             <span class="duration">Python</span>
@@ -129,14 +129,9 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="video-card"
-                        data-live="#" 
-                        data-code="#"
-                        data-views="8.2K views"
-                        data-date="3 months ago"
-                        data-desc="First entry in my Unity development log. I cover player movement mechanics (C#), tilemap collision, and basic animation state machines. Check out the source code to see how the physics system works.">
-                        
+
+                    <div class="video-card" data-live="#" data-code="#" data-views="8.2K views" data-date="3 months ago"
+                        data-desc="Unity devlog covering player movement mechanics.">
                         <div class="thumbnail">
                             <img src="https://via.placeholder.com/640x360/555/fff?text=Game+Dev" alt="Thumb">
                             <span class="duration">C#</span>
@@ -150,7 +145,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -166,12 +160,17 @@
                     </div>
 
                     <div class="post-text">
-                        As a Student Worker for USC ITS Engineering team, I serve as a frontline technical specialist 
-                        dedicated to maintaining the integrity of the university’s sprawling digital ecosystem. My role centers on the proactive monitoring and health-checking of enterprise systems 
-                        to ensure 24/7 uptime for the Trojan community, paired with the hands-on testing and validation of emerging hardware and software solutions before campus-wide deployment. 
-                        Beyond the technical troubleshooting, I collaborate daily within a cross-functional team of career engineers and fellow student workers, utilizing agile communication to 
-                        resolve complex infrastructure hurdles in real-time. This position has allowed me to bridge the gap between academic theory and large-scale IT operations, ensuring that the 
-                        technology supporting USC’s mission remains as resilient and high-performing as the students it serves.
+                        As a Student Worker for USC ITS Engineering team, I serve as a frontline technical specialist
+                        dedicated to maintaining the integrity of the university’s sprawling digital ecosystem. My role
+                        centers on the proactive monitoring and health-checking of enterprise systems
+                        to ensure 24/7 uptime for the Trojan community, paired with the hands-on testing and validation
+                        of emerging hardware and software solutions before campus-wide deployment.
+                        Beyond the technical troubleshooting, I collaborate daily within a cross-functional team of
+                        career engineers and fellow student workers, utilizing agile communication to
+                        resolve complex infrastructure hurdles in real-time. This position has allowed me to bridge the
+                        gap between academic theory and large-scale IT operations, ensuring that the
+                        technology supporting USC’s mission remains as resilient and high-performing as the students it
+                        serves.
                         <br><br>
                     </div>
 
@@ -194,14 +193,14 @@
                     </div>
 
                     <div class="post-text">
-                       I am proud to announce my acceptance into the Progressive Degree Program (PDP) at the 
-                       University of Southern California, allowing me to pursue my Master of Science in Computer 
-                       Science concurrently with my undergraduate studies. This opportunity enables me to accelerate 
-                       my academic trajectory and deepen my technical specialization in software engineering and 
-                       multimedia systems without pausing my professional development. By committing to this advanced 
-                       curriculum, I aim to further bridge the gap between complex backend architecture and intuitive 
-                       user experience design, equipping myself with the high-level expertise required to lead 
-                       innovation in the tech industry immediately upon graduation.
+                        I am proud to announce my acceptance into the Progressive Degree Program (PDP) at the
+                        University of Southern California, allowing me to pursue my Master of Science in Computer
+                        Science concurrently with my undergraduate studies. This opportunity enables me to accelerate
+                        my academic trajectory and deepen my technical specialization in software engineering and
+                        multimedia systems without pausing my professional development. By committing to this advanced
+                        curriculum, I aim to further bridge the gap between complex backend architecture and intuitive
+                        user experience design, equipping myself with the high-level expertise required to lead
+                        innovation in the tech industry immediately upon graduation.
                         <br><br>
                     </div>
 
@@ -224,15 +223,15 @@
                     </div>
 
                     <div class="post-text">
-                       As a Computer Science Games student in my senior Capstone, I serve as a pivotal member of the 
-                       Usability Team, utilizing my technical background to bridge the critical communication gap 
-                       between software engineers and game designers. My role focuses on running rigorous playtests 
-                       to pinpoint exactly where mechanics are confusing to players, isolating the disconnect between 
-                       developer logic and user interaction. Because I possess a strong foundation in both coding and 
-                       design principles, I am able to translate these qualitative observations of player friction 
-                       into actionable technical specifications for the engineering team and clear design iterations 
-                       for the creative team, ensuring that user confusion is resolved through precise, collaborative 
-                       problem-solving.
+                        As a Computer Science Games student in my senior Capstone, I serve as a pivotal member of the
+                        Usability Team, utilizing my technical background to bridge the critical communication gap
+                        between software engineers and game designers. My role focuses on running rigorous playtests
+                        to pinpoint exactly where mechanics are confusing to players, isolating the disconnect between
+                        developer logic and user interaction. Because I possess a strong foundation in both coding and
+                        design principles, I am able to translate these qualitative observations of player friction
+                        into actionable technical specifications for the engineering team and clear design iterations
+                        for the creative team, ensuring that user confusion is resolved through precise, collaborative
+                        problem-solving.
                         <br><br>
                     </div>
 
@@ -255,12 +254,16 @@
                     </div>
 
                     <div class="post-text">
-                       Specializing in the end-to-end user research lifecycle, I drive product quality through rigorous 
-                       documentation and heuristic reviews. My process involves synthesizing quantitative analytics with 
-                       qualitative video annotations to isolate specific usability friction points. I translate these findings 
-                       into comprehensive technical reports, serving as a bridge for team collaboration between engineering 
-                       and design. This evidence-based approach guides rapid product iteration, ensuring that every feature 
-                       update is directly aligned with validated user behaviors.
+                        Specializing in the end-to-end user research lifecycle, I drive product quality through rigorous
+                        documentation and heuristic reviews. My process involves synthesizing quantitative analytics
+                        with
+                        qualitative video annotations to isolate specific usability friction points. I translate these
+                        findings
+                        into comprehensive technical reports, serving as a bridge for team collaboration between
+                        engineering
+                        and design. This evidence-based approach guides rapid product iteration, ensuring that every
+                        feature
+                        update is directly aligned with validated user behaviors.
                         <br><br>
                     </div>
 
@@ -274,17 +277,22 @@
                 </div>
 
             </div>
-            
-            
-            <div id="view-playlists" class="section-view"><h2>Playlists</h2></div>
+
+
+            <div id="view-playlists" class="section-view">
+                <h2>Playlists</h2>
+                <p>Coming soon...</p>
+            </div>
             <div id="view-about" class="section-view">
                 <div class="about-container">
                     <div class="about-left">
                         <h2>Description</h2>
                         <div class="description-text">
                             <p>
-                                Hello! I'm Faith Recinos Garcia. I am a BS Computer Science Games and MS Computer Science student at USC with a
-                                passion for exploring the intersection of software engineering, artifical intelligence, and cyber secuirity. 
+                                Hello! I'm Faith Recinos Garcia. I am a BS Computer Science Games and MS Computer
+                                Science student at USC with a
+                                passion for exploring the intersection of software engineering, artifical intelligence,
+                                and cyber secuirity.
                                 I enjoy learning new programming languages and frameworks to expand my skill set.
                             </p>
                             <br>
@@ -293,7 +301,8 @@
                             </p>
                             <br>
                             <p>
-                                On this channel (portfolio), you will find devlogs of my latestgame projects, breakdowns, and experiments with UI/UX design. I love combining
+                                On this channel (portfolio), you will find devlogs of my latestgame projects,
+                                breakdowns, and experiments with UI/UX design. I love combining
                                 and experiences.
                             </p>
                             <br>
@@ -308,7 +317,7 @@
                             <h3>Details</h3>
                             <div class="detail-row">
                                 <span class="detail-label">For business inquiries:</span>
-                                <a href="mailto:fbrecino@usc.edu" class="email-btn">View email address</a>
+                                <a href="mailto:faithbellegarcia@gmail.com" class="email-btn">View email address</a>
                             </div>
                             <div class="detail-row">
                                 <span class="detail-label">Location:</span>
@@ -336,18 +345,11 @@
                 </div>
             </div>
 
-            <main class="content">
-            
-            <div id="view-about" class="section-view">
-                <h2>About</h2>
-                <p style="color:var(--text-secondary)">About description goes here.</p>
-            </div>
-
             <footer class="invisible-footer">
-                <p>&copy; 2026 Faith Recinos Garcia. Made with <i class="fas fa-heart" style="color: red;"></i> in California.</p>
+                <p>&copy; 2026 Faith Recinos Garcia. Made with <i class="fas fa-heart" style="color: red;"></i> in
+                    California.
+                </p>
             </footer>
-
-        </main>
 
         </main>
     </div>
@@ -355,11 +357,11 @@
     <div id="videoModal" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            
+
             <img id="modalImage" src="" alt="Project Screen" class="modal-img">
-            
+
             <h2 id="modalTitle" class="modal-title">Project Title</h2>
-            
+
             <div class="modal-actions-row">
                 <div class="modal-channel-info">
                     <div class="user-avatar-small modal-avatar">F</div>
@@ -369,7 +371,7 @@
                     </div>
                     <button class="pill-btn subscribe-btn-modal">Subscribe</button>
                 </div>
-                
+
                 <div class="modal-buttons-group">
                     <a href="#" id="liveBtn" target="_blank" class="pill-btn action-pill">
                         <i class="fas fa-thumbs-up"></i> Live Demo
@@ -399,8 +401,8 @@
             document.querySelectorAll('.tab-btn, .sidebar-link').forEach(btn => btn.classList.remove('active'));
             const view = document.getElementById('view-' + tabName);
             const btn = document.getElementById('btn-' + tabName);
-            if(view) view.classList.add('active-view');
-            if(btn) btn.classList.add('active');
+            if (view) view.classList.add('active-view');
+            if (btn) btn.classList.add('active');
         }
 
         /* --- MODAL LOGIC (UPDATED) --- */
@@ -410,7 +412,7 @@
         const modalImage = document.getElementById("modalImage");
         const liveBtn = document.getElementById("liveBtn");
         const codeBtn = document.getElementById("codeBtn");
-        
+
         // New elements for description box
         const modalViews = document.getElementById("modalViews");
         const modalDate = document.getElementById("modalDate");
@@ -434,10 +436,13 @@
                 modalImage.src = imgSource;
                 liveBtn.href = liveLink;
                 codeBtn.href = codeLink;
-                
+
                 modalViews.innerText = views;
                 modalDate.innerText = date;
-                modalDesc.innerText = desc;
+                
+                // --- FIXED HERE ---
+                // Changed from innerText to innerHTML so the <ul> and <li> tags render as bullets
+                modalDesc.innerHTML = desc; 
 
                 modal.style.display = "flex";
             });
@@ -457,4 +462,5 @@
     </script>
 
 </body>
+
 </html>
